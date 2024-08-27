@@ -1,0 +1,99 @@
+﻿@model LoginModel
+<style>
+    body {
+        padding-top: 15px;
+        font-size: 12px
+
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .main {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .login-or {
+        position: relative;
+        font-size: 18px;
+        color: #aaa;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .span-or {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: -2px;
+        margin-left: -25px;
+        background-color: #fff;
+        width: 50px;
+        text-align: center;
+    }
+
+    .hr-or {
+        background-color: #cdcdcd;
+        height: 1px;
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+    }
+
+    h3 {
+        text-align: center;
+        line-height: 300%;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+
+        <div class="main">
+            <h3>Sistema Vendas</h3>
+
+            @{
+                try
+                {
+                    var erro = TempData["ErrorLogin"].ToString();
+                    <h5 class="text-danger">@erro</h5>
+                }
+                catch
+                {
+                    
+                }
+            }
+            <form asp-controller="Home" asp-action="Login" method="post">
+                <div class="form-group">
+                    <br />
+                    <label for="inputUsernameEmail">Login ou email</label>
+                    <br />
+                    <input type="text" class="form-control" asp-for="Email" placeholder="Email">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <br />
+                    <label for="inputPassword">Senha</label>
+                    <br />
+                    <input type="password" class="form-control" asp-for="Senha" placeholder="Senha">
+                    <span asp-validation-for="Senha" class="text-danger"></span>
+                </div>
+                <br />
+                <a class="pull-right" href="#">Esquece a senha?</a>
+                <br />
+                <br />
+                <button type="submit" class="btn btn-primary">
+                        Entrar
+                </button>
+                <br />
+                <br />
+            </form>
+            <p class="text-center text-muted small">Não tem uma conta?<a href="#"> Crie aqui</a></p>
+        </div>
+
+    </div>
+</div>
