@@ -18,6 +18,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Curso Udemy\Curso ASP.NET\Sistema de vendas\SistemaVendas\SistemaVendas
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Curso Udemy/Curso ASP.NET/Sistema de vendas/SistemaVendas/SistemaVendas/Views/Cliente/Cadastro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxDYWRhc3Ryby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Curso Udemy/Curso ASP.NET/Sistema de vendas/SistemaVendas/SistemaVendas/Views/Cliente/Excluir.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxFeGNsdWlyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Curso Udemy/Curso ASP.NET/Sistema de vendas/SistemaVendas/SistemaVendas/Views/Cliente/ExcluirCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxFeGNsdWlyQ2xpZW50ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Curso Udemy/Curso ASP.NET/Sistema de vendas/SistemaVendas/SistemaVendas/Views/Cliente/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Curso Udemy/Curso ASP.NET/Sistema de vendas/SistemaVendas/SistemaVendas/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
