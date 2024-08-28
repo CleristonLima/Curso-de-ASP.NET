@@ -1,4 +1,13 @@
 ﻿@model LoginModel
+
+@{
+    Layout = null; // Cancela o uso do Laout template
+}
+
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/SistemaVendas.styles.css" asp-append-version="true" />
+
 <style>
     body {
         padding-top: 15px;
@@ -56,17 +65,6 @@
         <div class="main">
             <h3>Sistema Vendas</h3>
 
-            @{
-                try
-                {
-                    var erro = TempData["ErrorLogin"].ToString();
-                    <h5 class="text-danger">@erro</h5>
-                }
-                catch
-                {
-                    
-                }
-            }
             <form asp-controller="Home" asp-action="Login" method="post">
                 <div class="form-group">
                     <br />

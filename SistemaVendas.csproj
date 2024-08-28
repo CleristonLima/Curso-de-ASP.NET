@@ -7,6 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\images\Clientes.png" />
+    <None Include="wwwroot\images\Configuracoes.png" />
+    <None Include="wwwroot\images\Produtos.png" />
+    <None Include="wwwroot\images\Relatorios.png" />
+    <None Include="wwwroot\images\Vendas.png" />
+    <None Include="wwwroot\images\Vendedores.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MySql.Data" Version="9.0.0" />
   </ItemGroup>
 

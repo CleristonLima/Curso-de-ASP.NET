@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - SistemaVendas</title>
+    <title>Sistema Gestão de Vendas</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/SistemaVendas.styles.css" asp-append-version="true" />
 </head>
-<body>
+<body onload="CarregaUsuarioLogado()">
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
@@ -18,7 +18,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+                    @*<ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
@@ -28,7 +28,10 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login">Entrar no sistema</a>
                         </li>
-                    </ul>
+                    </ul>*@
+                    @using Microsoft.AspNetCore.Http
+                    @inject IHttpContextAccessor HttpContextAccessor
+                    <div id="NomeUsuarioLogado"></div>
                 </div>
             </div>
         </nav>
@@ -48,5 +51,27 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
+    <!--Ira fazer a função para aparecer o usuário logado-->
+    <script>
+
+        function CarregaUsuarioLogado()
+        {
+            var nome = '@HttpContextAccessor.HttpContext.Session.GetString("NomeUsuarioLogado")'
+
+            if (nome != "") 
+            {
+                var divNome = document.getElementById("NomeUsuarioLogado");
+                divNome.innerHTML = "Olá " + nome + " <a href='../Home/Login/0'>(Sair)</a>";
+                divNome.style = "color:blue; padding-top:15px;";
+
+            }
+            else // Usuário não logado
+            {
+                window.location.href = '../Home/Login';
+            }
+        }
+
+    </script>
 </body>
 </html>

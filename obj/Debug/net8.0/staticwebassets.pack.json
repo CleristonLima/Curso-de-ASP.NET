@@ -13,6 +13,30 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Curso Udemy\\Curso ASP.NET\\Sistema de vendas\\SistemaVendas\\SistemaVendas\\wwwroot\\images\\Clientes.png",
+      "PackagePath": "staticwebassets\\images\\Clientes.png"
+    },
+    {
+      "Id": "C:\\Curso Udemy\\Curso ASP.NET\\Sistema de vendas\\SistemaVendas\\SistemaVendas\\wwwroot\\images\\Configuracoes.png",
+      "PackagePath": "staticwebassets\\images\\Configuracoes.png"
+    },
+    {
+      "Id": "C:\\Curso Udemy\\Curso ASP.NET\\Sistema de vendas\\SistemaVendas\\SistemaVendas\\wwwroot\\images\\Produtos.png",
+      "PackagePath": "staticwebassets\\images\\Produtos.png"
+    },
+    {
+      "Id": "C:\\Curso Udemy\\Curso ASP.NET\\Sistema de vendas\\SistemaVendas\\SistemaVendas\\wwwroot\\images\\Relatorios.png",
+      "PackagePath": "staticwebassets\\images\\Relatorios.png"
+    },
+    {
+      "Id": "C:\\Curso Udemy\\Curso ASP.NET\\Sistema de vendas\\SistemaVendas\\SistemaVendas\\wwwroot\\images\\Vendas.png",
+      "PackagePath": "staticwebassets\\images\\Vendas.png"
+    },
+    {
+      "Id": "C:\\Curso Udemy\\Curso ASP.NET\\Sistema de vendas\\SistemaVendas\\SistemaVendas\\wwwroot\\images\\Vendedores.png",
+      "PackagePath": "staticwebassets\\images\\Vendedores.png"
+    },
+    {
       "Id": "C:\\Curso Udemy\\Curso ASP.NET\\Sistema de vendas\\SistemaVendas\\SistemaVendas\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
