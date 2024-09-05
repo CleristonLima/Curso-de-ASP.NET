@@ -12,7 +12,7 @@
             @{
                 foreach (var item in (List<ClienteModel>)ViewBag.ListaClientes)
                 {
-                    <option value="@item.Id">@item.Nome</option>
+                            <option value="@item.Id">@item.Nome</option>
                 }
             }
         </select>
@@ -24,7 +24,7 @@
             @{
                 foreach (var item in (List<VendedorModel>)ViewBag.ListaVendedores)
                 {
-                    <option value="@item.Id">@item.Nome</option>
+                            <option value="@item.Id">@item.Nome</option>
                 }
             }
         </select>
@@ -37,7 +37,7 @@
                 @{
                     foreach (var item in (List<ProdutoModel>)ViewBag.ListaProdutos)
                     {
-                       <option value="@item.Id">@item.Nome | @item.Preco_Unitario</option>
+                               <option value="@item.Id">@item.Nome | @item.Preco_Unitario</option>
                     }
                 }
             </select>
@@ -79,6 +79,9 @@
     <textarea asp-for="ListaProdutos" id="ListaProdutosJSON" style="display:none;"></textarea>
     <br />
     <button type="submit" class="btn-block btn btn-success">Registrar</button>
+    <br />
+    <br />
+    <button type="button" class="btn-block btn btn-primary" onclick="Voltar()">Listagem de Vendas</button>
 </form>
 
 <!--Para adicionar a lista referente ao produto -->
@@ -94,6 +97,10 @@
     var txtTotal = document.getElementById("txtTotal");
     var ListaProdutosJSON = document.getElementById("ListaProdutosJSON");
 
+    function Voltar() 
+    { 
+        window.location.href = '../Venda/Index';
+    }
 
     function AdicionarProduto() {
         var DescricaoPreco = CodigoProduto.options[CodigoProduto.selectedIndex].text;

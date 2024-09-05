@@ -22,18 +22,42 @@ namespace SistemaVendas.Uteis
         // Espera um parametro do tipo string contendo um comando SQL do tipo SELECT
         public DataTable RetDataTable(string sql)
         {
-            DataTable data = new DataTable();
-            MySqlCommand Command = new MySqlCommand(sql, Connection);
-            MySqlDataAdapter da = new MySqlDataAdapter(Command);
-            da.Fill(data);
-            return data;
+            using (MySqlConnection conn = new MySqlConnection(ConnectionString))
+            {
+                conn.Open();
+                MySqlCommand Command = new MySqlCommand(sql, conn);
+
+                MySqlDataAdapter da = new MySqlDataAdapter(Command);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+        }
+
+        // Recebe o comando preparado
+        public DataTable RetDataTable(MySqlCommand Command)
+        {
+            using (MySqlConnection conn = new MySqlConnection(ConnectionString))
+            {
+                conn.Open();
+                Command.Connection = conn;
+
+                MySqlDataAdapter da = new MySqlDataAdapter(Command);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
         }
 
         // Espera um parametro do tipo string contendo um comando SQL do tipo INSERT, UPDATE E DELETE
         public void ExecutarComandoSQL(string sql)
         {
-            MySqlCommand Command = new MySqlCommand(sql, Connection);
-            Command.ExecuteNonQuery();
+            using (MySqlConnection conn = new MySqlConnection(ConnectionString))
+            {
+                conn.Open();
+                MySqlCommand Command = new MySqlCommand(sql, conn);
+                Command.ExecuteNonQuery();
+            }
         }
     }
 }

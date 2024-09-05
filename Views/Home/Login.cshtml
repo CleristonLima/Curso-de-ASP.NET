@@ -1,7 +1,7 @@
 ﻿@model LoginModel
 
 @{
-    Layout = null; // Cancela o uso do Laout template
+    Layout = "../Shared/_LayoutLogin.cshtml"; // Cancela o uso do Layout template
 }
 
 <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
@@ -11,7 +11,7 @@
 <style>
     body {
         padding-top: 15px;
-        font-size: 12px
+        font-size: 12px;
 
     }
 
@@ -56,6 +56,13 @@
     h3 {
         text-align: center;
         line-height: 300%;
+        color: white; /* Texto branco */
+        background-color: black; /* Fundo preto */
+        padding: 20px; /* Espaço interno para dar o formato de quadrado */
+        border-radius: 10px; /* Bordas arredondadas (opcional) */
+        display: block; /* Define o h3 como block */
+        width: fit-content; /* Faz com que o quadrado se ajuste ao tamanho do conteúdo */
+        margin: 0 auto; /* Centraliza o elemento horizontalmente */
     }
 </style>
 
@@ -68,14 +75,12 @@
             <form asp-controller="Home" asp-action="Login" method="post">
                 <div class="form-group">
                     <br />
-                    <label for="inputUsernameEmail">Login ou email</label>
                     <br />
                     <input type="text" class="form-control" asp-for="Email" placeholder="Email">
                     <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <br />
-                    <label for="inputPassword">Senha</label>
                     <br />
                     <input type="password" class="form-control" asp-for="Senha" placeholder="Senha">
                     <span asp-validation-for="Senha" class="text-danger"></span>
@@ -90,7 +95,7 @@
                 <br />
                 <br />
             </form>
-            <p class="text-center text-muted small">Não tem uma conta?<a href="#"> Crie aqui</a></p>
+            <p class="text-center text-muted small" style="color:#242424">Não tem uma conta?<a href="#"> Crie aqui</a></p>
         </div>
 
     </div>

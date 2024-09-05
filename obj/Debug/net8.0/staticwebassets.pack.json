@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\images\\Configuracoes.png"
     },
     {
+      "Id": "C:\\Curso Udemy\\Curso ASP.NET\\Sistema de vendas\\SistemaVendas\\SistemaVendas\\wwwroot\\images\\Fundo.png",
+      "PackagePath": "staticwebassets\\images\\Fundo.png"
+    },
+    {
       "Id": "C:\\Curso Udemy\\Curso ASP.NET\\Sistema de vendas\\SistemaVendas\\SistemaVendas\\wwwroot\\images\\Produtos.png",
       "PackagePath": "staticwebassets\\images\\Produtos.png"
     },

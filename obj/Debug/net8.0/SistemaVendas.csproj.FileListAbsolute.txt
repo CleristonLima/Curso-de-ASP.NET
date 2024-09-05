@@ -49,3 +49,4 @@ C:\Curso Udemy\Curso ASP.NET\Sistema de vendas\SistemaVendas\SistemaVendas\obj\D
 C:\Curso Udemy\Curso ASP.NET\Sistema de vendas\SistemaVendas\SistemaVendas\obj\Debug\net8.0\SistemaV.B4BA3626.Up2Date
 C:\Curso Udemy\Curso ASP.NET\Sistema de vendas\SistemaVendas\SistemaVendas\obj\Debug\net8.0\SistemaVendas.sourcelink.json
 C:\Curso Udemy\Curso ASP.NET\Sistema de vendas\SistemaVendas\SistemaVendas\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Curso Udemy\Curso ASP.NET\Sistema de vendas\SistemaVendas\SistemaVendas\obj\Debug\net8.0\scopedcss\Views\Shared\_LayoutLogin.cshtml.rz.scp.css

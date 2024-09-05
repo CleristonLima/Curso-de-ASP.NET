@@ -6,6 +6,13 @@ namespace SistemaVendas.Controllers
     public class VendaController : Controller
     {
         [HttpGet]
+        public IActionResult Index()
+        {
+            ViewBag.ListaVendas = new VendaModel().ListagemVendas();
+            return View();
+        }
+
+        [HttpGet]
         public IActionResult Registrar()
         {
             CarregarDados();

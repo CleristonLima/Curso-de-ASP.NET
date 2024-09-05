@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OALl62tGjEr8uiDQcrJpasHtpENAJCjJ0BtKW8dafOI=",
+  "Hash": "l2BWGwJV6UHx3fivw8OfGbA/BHB684GBfP98FVAmmsY=",
   "Source": "SistemaVendas",
   "BasePath": "_content/SistemaVendas",
   "Mode": "Default",
@@ -129,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Configuracoes.png"
+    },
+    {
+      "Identity": "C:\\Curso Udemy\\Curso ASP.NET\\Sistema de vendas\\SistemaVendas\\SistemaVendas\\wwwroot\\images\\Fundo.png",
+      "SourceId": "SistemaVendas",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Curso Udemy\\Curso ASP.NET\\Sistema de vendas\\SistemaVendas\\SistemaVendas\\wwwroot\\",
+      "BasePath": "_content/SistemaVendas",
+      "RelativePath": "images/Fundo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Fundo.png"
     },
     {
       "Identity": "C:\\Curso Udemy\\Curso ASP.NET\\Sistema de vendas\\SistemaVendas\\SistemaVendas\\wwwroot\\images\\Produtos.png",
