@@ -66,14 +66,12 @@
             catch { }
          }
         <select asp-for="Unidade_medida" class="form-control">
-
             @{
                 if (vUnidadeMedida != "")
                 {
-                   <option value="vUnidadeMedida" selected>@vUnidadeMedida</option>
+                    <option value="@vUnidadeMedida" selected>@vUnidadeMedida</option>
                 }
             }
-
             <option value="UN">UN</option>
             <option value="CX">CX</option>
             <option value="Kg">KG</option>

@@ -107,6 +107,13 @@ namespace SistemaVendas.Models
                     $"{lista_produtos[i].PrecoUnitario.ToString().Replace(",",".")})";
 
                 objDAL.ExecutarComandoSQL(sql);
+
+                // Baixa o produto do estoque
+                sql = "Update produto " +
+                      $"set Quantidade_estoque = (Quantidade_estoque - " + int.Parse(lista_produtos[i].QtdeProduto.ToString()) + ") " + 
+                      $"where id = {lista_produtos[i].CodigoProduto.ToString()}";
+
+                objDAL.ExecutarComandoSQL(sql);
             }
         }
     }

@@ -5,6 +5,14 @@ namespace SistemaVendas.Controllers
 {
     public class VendaController : Controller
     {
+        private IHttpContextAccessor httpContext;
+
+        // Recebe o contexto HTTTP via injeção de dependencias
+        public VendaController(IHttpContextAccessor HttpContextAccessor)
+        {
+            httpContext = HttpContextAccessor;
+        }
+
         [HttpGet]
         public IActionResult Index()
         {
@@ -22,6 +30,8 @@ namespace SistemaVendas.Controllers
         [HttpPost]
         public IActionResult Registrar(VendaModel venda)
         {
+            // Captura o Id do vendedor logado no sistema
+            venda.Vendedor_Id = httpContext.HttpContext.Session.GetString("IdUsuarioLogado");
             venda.Inserir();
             CarregarDados();
             return View();
