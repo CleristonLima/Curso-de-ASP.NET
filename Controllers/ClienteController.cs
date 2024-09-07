@@ -28,7 +28,7 @@ namespace SistemaVendas.Controllers
         [HttpPost]
         public IActionResult Cadastro(ClienteModel cliente)
         {
-            if(ModelState.IsValid || true)
+            if (ModelState.IsValid || true)
             {
                 cliente.Gravar();
                 return RedirectToAction("Index");

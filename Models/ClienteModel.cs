@@ -2,6 +2,7 @@
 using System.Data;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.CompilerServices;
+using MySql.Data.MySqlClient;
 
 namespace SistemaVendas.Models
 {
@@ -30,7 +31,7 @@ namespace SistemaVendas.Models
             string sql = "SELECT Id, Nome, CPF_CNPJ, Email, Senha FROM Cliente order by Nome asc";
             DataTable dt = objDAL.RetDataTable(sql);
 
-            for(int i = 0; i < dt.Rows.Count; i++)
+            for (int i = 0; i < dt.Rows.Count; i++)
             {
                 item = new ClienteModel
                 {
@@ -55,20 +56,20 @@ namespace SistemaVendas.Models
             DataTable dt = objDAL.RetDataTable(sql);
 
             item = new ClienteModel
-                {
-                    Id = dt.Rows[0]["Id"].ToString(),
-                    Nome = dt.Rows[0]["Nome"].ToString(),
-                    CPF = dt.Rows[0]["CPF_CNPJ"].ToString(),
-                    Email = dt.Rows[0]["Email"].ToString(),
-                    Senha = dt.Rows[0]["Senha"].ToString()
-                };
+            {
+                Id = dt.Rows[0]["Id"].ToString(),
+                Nome = dt.Rows[0]["Nome"].ToString(),
+                CPF = dt.Rows[0]["CPF_CNPJ"].ToString(),
+                Email = dt.Rows[0]["Email"].ToString(),
+                Senha = dt.Rows[0]["Senha"].ToString()
+            };
 
             return item;
         }
 
         // Insert ou Update
 
-        public void Gravar() 
+        public void Gravar()
         {
             DAL objDAL = new DAL();
             string sql = string.Empty;

@@ -32,7 +32,7 @@ namespace SistemaVendas.Models
             DAL objDAL = new DAL();
             DataTable dt = objDAL.RetDataTable(Command);
 
-            if(dt.Rows.Count ==1)
+            if(dt.Rows.Count == 1)
             {
                 // Ira gravar o login e senha do usuário
                 Id = dt.Rows[0]["ID"].ToString();
